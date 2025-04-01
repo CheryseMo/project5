@@ -1,0 +1,161 @@
+/* Ensure the body covers the whole viewport */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+  background: url('photo-1517685352821-92cf88aee5a5.avif') no-repeat center center fixed;
+  background-size: cover;
+  color: #000000;
+  text-align: center;
+  padding: 5px;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;  /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+/* Ensure that the parent container of left and right containers has flexbox */
+.App {
+  display: flex;
+  justify-content: space-between;  /* Distribute space between containers */
+  gap: 50px;  /* Adds space between left and right containers */
+  flex-wrap: nowrap; /* Containers will not stack unless the screen size is small */
+  width: 100%;  /* Make sure it takes the full width of the body */
+  height: 100%;  /* Make sure it takes the full height of the body */
+}
+
+/* Left container styling */
+.left-container {
+  width: 30%;  /* Takes 30% of the screen width */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 280px;  /* Ensures a minimum width */
+}
+
+/* Right container styling */
+.right-container {
+  width: 60%;  /* Takes 60% of the screen width */
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;  /* Ensures a minimum width */
+}
+
+/* Ensure the header and other items are styled */
+h1 {
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+.location-selector {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.location {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 5px;
+}
+
+.summary {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+}
+
+.summary p {
+  margin: 5px 0;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus,
+select:focus {
+  box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.6);
+  outline: none;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: rgba(244, 241, 241, 0.85);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #3498db;
+  color: white;
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(200, 230, 255, 0.5);
+}
+
+tr:hover {
+  background-color: rgba(173, 216, 230, 0.7);
+  transition: 0.3s;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .App {
+    flex-direction: column;  /* Stack containers on small screens */
+    gap: 20px;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;  /* Stacks on small screens */
+    margin-bottom: 20px;
+  }
+
+  input,
+  select {
+    width: 90%;  /* Make inputs and selects wider on small screens */
+  }
+
+  table {
+    width: 90%;  /* Ensure table takes more space on small screens */
+  }
+}
+
+
