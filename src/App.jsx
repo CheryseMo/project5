@@ -120,7 +120,7 @@ function App() {
         {/* Search Bar */}
         <input
           type="text"
-          placeholder="Search by Date/Time..."
+          placeholder="Search by Time..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
